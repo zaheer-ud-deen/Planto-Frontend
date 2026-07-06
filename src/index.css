@@ -1,0 +1,24 @@
+/* Just add this anywhere in your CSS */
+/* src/index.css */
+
+
+
+* {
+  scroll-behavior: smooth;
+}
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Force override */
+* {
+  scroll-behavior: smooth !important;
+  
+}
+ul>li{
+  cursor: pointer;
+}
+/* In global CSS or add to DashboardLayout */
