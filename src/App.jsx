@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import DashboardLayout from "./layouts/DashboardLayout";
-import DashboardMain from "./pages/Dashboard/DashboardMain";
+import DashboardMain from "./pages/dashboard/DashboardMain";
 import Products from "./pages/dashboard/Products";
 import Orders from "./pages/dashboard/Orders";
 import Users from "./pages/dashboard/Users";
