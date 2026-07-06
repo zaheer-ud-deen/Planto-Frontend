@@ -30,7 +30,7 @@ const Users = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/users", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await response.json();
@@ -47,7 +47,7 @@ const Users = () => {
   const fetchStats = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/users/stats/summary", {
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/users/stats/summary", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await response.json();
@@ -62,7 +62,7 @@ const Users = () => {
   const updateUserRole = async (id, role) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/api/users/${id}/role`, {
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${id}/role`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const Users = () => {
   const updateUserStatus = async (id, status) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/api/users/${id}/status`, {
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${id}/status`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const Users = () => {
     if (window.confirm("Are you sure you want to delete this user? This action cannot be undone!")) {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+        const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${id}`, {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }
         });

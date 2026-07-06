@@ -1,5 +1,5 @@
 // src/api/productApi.js
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://planto-backend-production.up.railway.app/api";
 
 const getToken = () => localStorage.getItem("token");
 

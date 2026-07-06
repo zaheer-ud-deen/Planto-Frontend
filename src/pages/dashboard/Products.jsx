@@ -151,7 +151,7 @@ const Products = () => {
         {filteredProducts.map((product) => (
           <div key={product._id} className="bg-[#1a2a1a] rounded-2xl border border-white/10 overflow-hidden hover:bg-[#1e2e1e] transition">
             <img 
-                 src={`http://localhost:5000${product.image}`} 
+                 src={`https://planto-backend-production.up.railway.app${product.image}`} 
                  alt={product.name} 
                  className="w-full h-48 object-cover" 
               />

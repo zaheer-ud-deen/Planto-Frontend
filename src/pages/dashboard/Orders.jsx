@@ -27,7 +27,7 @@ const Orders = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/orders");
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/orders");
       const data = await response.json();
       if (data.success) {
         setOrders(data.orders);
@@ -41,7 +41,7 @@ const Orders = () => {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/orders/stats/summary");
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/orders/stats/summary");
       const data = await response.json();
       if (data.success) {
         setStats(data.stats);
@@ -53,7 +53,7 @@ const Orders = () => {
 
   const updateOrderStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${id}`, {
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/orders/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus })
@@ -71,7 +71,7 @@ const Orders = () => {
   const deleteOrder = async (id) => {
     if (window.confirm("Are you sure you want to delete this order?")) {
       try {
-        const response = await fetch(`http://localhost:5000/api/orders/${id}`, {
+        const response = await fetch(`https://planto-backend-production.up.railway.app/api/orders/${id}`, {
           method: "DELETE"
         });
         const data = await response.json();

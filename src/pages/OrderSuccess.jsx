@@ -16,7 +16,7 @@ const OrderSuccess = () => {
 
   const verifyPayment = async (sessionId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/verify-payment/${sessionId}`);
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/verify-payment/${sessionId}`);
       const data = await response.json();
       if (data.success) {
         setOrder(data.order);

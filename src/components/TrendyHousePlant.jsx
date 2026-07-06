@@ -17,7 +17,7 @@ const TrendyHousePlant = () => {
   const fetchFeaturedProducts = async () => {
     try {
       // First try to get featured products
-      const response = await fetch("http://localhost:5000/api/products?isFeatured=true");
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/products?isFeatured=true");
       const data = await response.json();
       
       if (data.success && data.products.length > 0) {
@@ -33,7 +33,7 @@ const TrendyHousePlant = () => {
         setPlants(formattedPlants);
       } else {
         // If no featured products, get any products
-        const allResponse = await fetch("http://localhost:5000/api/products");
+        const allResponse = await fetch("https://planto-backend-production.up.railway.app/api/products");
         const allData = await allResponse.json();
         if (allData.success && allData.products.length > 0) {
           const formattedPlants = allData.products.map(product => ({
@@ -105,7 +105,7 @@ const TrendyHousePlant = () => {
 
       <div className="h-64 flex items-center justify-center -mt-20">
         <img
-          src={current.image.startsWith("http") ? current.image : `http://localhost:5000${current.image}`}
+          src={current.image.startsWith("http") ? current.image : `https://planto-backend-production.up.railway.app${current.image}`}
           alt={current.name}
           className="h-56 w-48 object-contain"
         />

@@ -27,7 +27,7 @@ const Cart = () => {
           <div key={item.id} className="bg-white/[0.04] rounded-2xl border border-white/10 p-4 mb-4 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src={item.image.startsWith("http") ? item.image : `http://localhost:5000${item.image}`}
+                src={item.image.startsWith("http") ? item.image : `https://planto-backend-production.up.railway.app${item.image}`}
                 alt={item.name}
                 className="w-16 h-16 object-cover rounded-xl"
               />

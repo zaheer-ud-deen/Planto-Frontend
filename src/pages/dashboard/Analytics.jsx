@@ -35,25 +35,25 @@ const Analytics = () => {
       const token = localStorage.getItem("token");
       
       const [statsRes, dailyRes, monthlyRes, topProductsRes, categoriesRes, statusRes, activityRes] = await Promise.all([
-        fetch("http://localhost:5000/api/analytics/stats", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/stats", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/sales/daily", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/sales/daily", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/sales/monthly", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/sales/monthly", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/top-products", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/top-products", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/categories", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/categories", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/order-status", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/order-status", {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch("http://localhost:5000/api/analytics/recent-activity", {
+        fetch("https://planto-backend-production.up.railway.app/api/analytics/recent-activity", {
           headers: { Authorization: `Bearer ${token}` }
         })
       ]);

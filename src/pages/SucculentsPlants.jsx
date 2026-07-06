@@ -23,7 +23,7 @@ function SucculentsPlants() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products?category=Succulents%20Plants");
+      const response = await fetch("https://planto-backend-production.up.railway.app/api/products?category=Succulents%20Plants");
       const data = await response.json();
       if (data.success) {
         setProducts(data.products);
@@ -51,7 +51,7 @@ function SucculentsPlants() {
             {products.map((product) => (
               <div key={product._id} className="bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/[0.06] transition-all">
                 <img 
-                  src={`http://localhost:5000${product.image}`} 
+                  src={`https://planto-backend-production.up.railway.app${product.image}`} 
                   alt={product.name} 
                   className="w-full h-48 object-cover"
                 />

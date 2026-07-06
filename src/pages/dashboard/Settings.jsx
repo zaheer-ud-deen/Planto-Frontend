@@ -70,7 +70,7 @@ const Settings = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/api/users/${user?.id}`, {
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${user?.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const Settings = () => {
   
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`http://localhost:5000/api/users/${user.id}/profile-image`, {
+    const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${user.id}/profile-image`, {
       method: "PUT",
       headers: { Authorization: `Bearer ${token}` },
       body: formData
@@ -146,7 +146,7 @@ const Settings = () => {
     const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user") || "{}");
     
-    const response = await fetch(`http://localhost:5000/api/users/${user.id}/password`, {
+    const response = await fetch(`https://planto-backend-production.up.railway.app/api/users/${user.id}/password`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -244,7 +244,7 @@ const Settings = () => {
           <div className="flex items-center gap-6 mb-6">
   <div className="relative">
     <img 
-      src={user?.profileImage ? `http://localhost:5000${user.profileImage}` : "https://ui-avatars.com/api/?name=" + (user?.username || "Admin") + "&background=22c55e&color=fff"} 
+      src={user?.profileImage ? `https://planto-backend-production.up.railway.app${user.profileImage}` : "https://ui-avatars.com/api/?name=" + (user?.username || "Admin") + "&background=22c55e&color=fff"} 
       alt="Profile"
       className="w-20 h-20 rounded-full object-cover border-2 border-green-500"
     />

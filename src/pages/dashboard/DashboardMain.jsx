@@ -22,7 +22,7 @@ const DashboardMain = () => {
       const token = localStorage.getItem("token");
       
       // Fetch stats
-      const statsRes = await fetch("http://localhost:5000/api/dashboard/stats", {
+      const statsRes = await fetch("https://planto-backend-production.up.railway.app/api/dashboard/stats", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const statsData = await statsRes.json();
@@ -31,7 +31,7 @@ const DashboardMain = () => {
       }
 
       // Fetch orders
-      const ordersRes = await fetch("http://localhost:5000/api/orders", {
+      const ordersRes = await fetch("https://planto-backend-production.up.railway.app/api/orders", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const ordersData = await ordersRes.json();
@@ -43,7 +43,7 @@ const DashboardMain = () => {
       }
 
       // Fetch products (for top selling)
-      const productsRes = await fetch("http://localhost:5000/api/products", {
+      const productsRes = await fetch("https://planto-backend-production.up.railway.app/api/products", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const productsData = await productsRes.json();
@@ -57,7 +57,7 @@ const DashboardMain = () => {
       }
 
       // Fetch weekly sales
-      const salesRes = await fetch("http://localhost:5000/api/analytics/sales/weekly", {
+      const salesRes = await fetch("https://planto-backend-production.up.railway.app/api/analytics/sales/weekly", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const salesData = await salesRes.json();
@@ -66,7 +66,7 @@ const DashboardMain = () => {
       }
 
       // Fetch recent activity
-      const activityRes = await fetch("http://localhost:5000/api/analytics/recent-activity", {
+      const activityRes = await fetch("https://planto-backend-production.up.railway.app/api/analytics/recent-activity", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const activityData = await activityRes.json();
@@ -177,7 +177,7 @@ const DashboardMain = () => {
           {/* Admin Avatar */}
           {user?.profileImage ? (
             <img 
-              src={`http://localhost:5000${user.profileImage}`} 
+              src={`https://planto-backend-production.up.railway.app${user.profileImage}`} 
               alt="Profile"
               className="w-10 h-10 rounded-full object-cover border-2 border-green-500"
             />

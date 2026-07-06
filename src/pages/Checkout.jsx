@@ -33,7 +33,7 @@ const Checkout = () => {
 
   try {
     // ✅ Step 1: Save order to database FIRST
-    const orderResponse = await fetch("http://localhost:5000/api/orders", {
+    const orderResponse = await fetch("https://planto-backend-production.up.railway.app/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -59,7 +59,7 @@ const Checkout = () => {
     }
 
     // ✅ Step 2: Then create Stripe session with order ID
-    const stripeResponse = await fetch("http://localhost:5000/api/create-checkout-session", {
+    const stripeResponse = await fetch("https://planto-backend-production.up.railway.app/api/create-checkout-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -122,7 +122,7 @@ const Checkout = () => {
                 <div key={item.id} className="flex justify-between items-center border-b border-white/10 pb-3">
                   <div className="flex items-center gap-3">
                     <img 
-                      src={item.image.startsWith("http") ? item.image : `http://localhost:5000${item.image}`}
+                      src={item.image.startsWith("http") ? item.image : `https://planto-backend-production.up.railway.app${item.image}`}
                       alt={item.name}
                       className="w-12 h-12 object-cover rounded-xl"
                     />

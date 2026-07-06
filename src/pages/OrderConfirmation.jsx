@@ -13,7 +13,7 @@ const OrderConfirmation = () => {
 
   const fetchOrder = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${id}`);
+      const response = await fetch(`https://planto-backend-production.up.railway.app/api/orders/${id}`);
       const data = await response.json();
       if (data.success) {
         setOrder(data.order);

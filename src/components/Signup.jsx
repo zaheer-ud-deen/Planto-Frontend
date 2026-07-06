@@ -25,7 +25,7 @@ const Signup = () => {
     setError("oh my yes");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup", {
+      const response = await axios.post("https://planto-backend-production.up.railway.app/api/auth/signup", {
         username: formData.username,
         email: formData.email,
         password: formData.password,
