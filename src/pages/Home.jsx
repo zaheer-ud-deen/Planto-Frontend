@@ -2,7 +2,7 @@ import bgImage from "../assets/bg.png";
 import calatheaImage from "../assets/hero.png";
 import Gold from "../assets/Gold.png";
 import review from "../assets/review.png";
-import Rose from "../assets/rose.png";
+import Rose from "../assets/Rose.png";
 import bag from "../assets/bag.png";
 import TopSellingCard from "../components/TopSellingCard";
 import TrendyHousePlant from "../components/TrendyHousePlant";
